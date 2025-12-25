@@ -100,4 +100,18 @@ class BookingController extends Controller
             ], 500);
         }
     }
+     // ===============================
+    // ADMIN: lihat semua booking
+    // ===============================
+    public function index()
+    {
+        $bookings = Booking::with(['user', 'car'])
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return response()->json([
+            'status' => 'success',
+            'data' => $bookings
+        ]);
+    }
 }
