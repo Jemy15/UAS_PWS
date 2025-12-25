@@ -114,4 +114,21 @@ class BookingController extends Controller
             'data' => $bookings
         ]);
     }
+    
+     // ADMIN: update status booking (approve/reject/completed)
+        public function updateStatus(Request $request, $id)
+    {
+        $request->validate([
+            'status' => 'required|in:approved,rejected,completed'
+        ]);
+
+        $booking = Booking::findOrFail($id);
+        $booking->status = $request->status;
+        $booking->save();
+
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Booking status updated successfully'
+        ]);
+    }
 }
