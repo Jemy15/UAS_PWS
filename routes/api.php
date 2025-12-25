@@ -50,3 +50,9 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/bookings', [BookingController::class, 'store']);
     Route::get('/bookings/me', [BookingController::class, 'myBookings']);
 });
+
+// ADMIN BOOKING MANAGEMENT
+Route::middleware(['auth:api', 'admin'])->group(function () {
+    Route::get('/admin/bookings', [BookingController::class, 'index']);
+    Route::put('/admin/bookings/{id}/status', [BookingController::class, 'updateStatus']);
+});
