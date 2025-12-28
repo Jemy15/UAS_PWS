@@ -48,7 +48,7 @@ Route::middleware('auth:api')->group(function () {
     // BOOKINGS
     // ===============================
     Route::post('/bookings', [BookingController::class, 'store']);
-    Route::get('/bookings/me', [BookingController::class, 'myBookings']);
+    Route::get('/bookings/my', [BookingController::class, 'myBookings']);
 });
 
 // ADMIN BOOKING MANAGEMENT

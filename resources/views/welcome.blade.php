@@ -18,8 +18,14 @@
                 menggunakan Laravel REST API
             </p>
 
-            <a href="/login" class="btn btn-primary btn-lg w-100 mb-2">
+            <!-- Tombol Login -->
+            <a href="{{ route('login') }}" class="btn btn-primary btn-lg w-100 mb-2">
                 Login
+            </a>
+
+            <!-- Tombol Register -->
+            <a href="{{ route('register') }}" class="btn btn-outline-secondary w-100 mb-3">
+                Register
             </a>
 
             <small class="text-muted">
