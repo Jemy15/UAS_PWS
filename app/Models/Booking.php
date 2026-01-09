@@ -43,4 +43,12 @@ class Booking extends Model
     {
         return $this->belongsTo(Car::class);
     }
+
+    /**
+     * Booking has one payment.
+     */
+    public function payment()
+    {
+        return $this->hasOne(Payment::class);
+    }
 }

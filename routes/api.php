@@ -13,6 +13,13 @@ use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CarController;
 use App\Http\Controllers\Api\BookingController;
 
+// ===============================
+// MODULE Payments
+// ===============================
+use App\Http\Controllers\Api\PaymentController;
+
+Route::post('/payments', [PaymentController::class, 'store']);
+
 /*
 |--------------------------------------------------------------------------
 | PUBLIC ROUTES (TANPA TOKEN)
