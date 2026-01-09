@@ -9,7 +9,8 @@
 </head>
 <body class="bg-light">
 
-    <div class="container vh-100 d-flex justify-content-center align-items-center">
+    <div class="container vh
+    -100 d-flex justify-content-center align-items-center">
         <div class="card shadow-lg p-5 text-center" style="max-width: 500px;">
             
             <h2 class="mb-3 fw-bold">🚗 Sistem Rental Mobil</h2>
